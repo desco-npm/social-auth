@@ -1,0 +1,28 @@
+{
+  "name": "@desco/social-auth",
+  "version": "1.0.0",
+  "description": "Login in social networks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/descodifica/social-auth.git"
+  },
+  "keywords": [
+    "login",
+    "social",
+    "network"
+  ],
+  "author": "Rafael A. R. Dias <eu@diasrafael.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/descodifica/social-auth/issues"
+  },
+  "homepage": "https://github.com/descodifica/social-auth#readme",
+  "dependencies": {
+    "googleapis": "^67.0.0",
+    "query-string": "^6.13.8"
+  }
+}
