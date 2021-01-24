@@ -12,14 +12,17 @@ module.exports = class Google {
   }
 
   generateAuthUrl (params = {}) {
+    const scope = params.scope
+      ? typeof params.scope === 'string'
+        ? params.scope.split(';')
+        : params.scope
+      :  [ 'userinfo.email', 'userinfo.profile', ]
+
     return this.oauth2Client.generateAuthUrl({
+      ...params,
       access_type: params.access_type || 'offline',
-      scope: (
-        (params.scope || [ 'userinfo.email', 'userinfo.profile', ])
-        .map(i => `https://www.googleapis.com/auth/${i}`)
-        ),
-        prompt: params.prompt || 'consent',
-        ...params,
+      scope: scope.map(i => `https://www.googleapis.com/auth/${i}`),
+      prompt: params.prompt || 'consent',
     })
   }
 
@@ -36,19 +39,19 @@ module.exports = class Google {
 
     const oauth2 = google.oauth2({
       auth: this.oauth2Client,
-      version: 'v2'
+      version: 'v2',
     })
 
-  return new Promise((resolve, reject) => {
-    oauth2.userinfo.get(
-      function(e, res) {
-        if (e) {
-           reject(e)
-        }
-        else {
-           resolve(res)
-        }
-      })
+    return new Promise((resolve, reject) => {
+      oauth2.userinfo.get(
+        function(e, res) {
+          if (e) {
+            reject(e)
+          }
+          else {
+            resolve(res)
+          }
+        })
     })
   }
 
