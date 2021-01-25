@@ -60,4 +60,14 @@ module.exports = class Google {
       .then(() => true)
       .catch(() => false)
   }
+
+  static checkToken (token) {
+    const axios = require('axios')
+
+    const url = 'https://www.googleapis.com/oauth2/v2/tokeninfo?access_token=' + token
+
+    return axios.get(url)
+      .then(() => true)
+      .catch(() => false)
+  }
 }
