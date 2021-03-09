@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/descodifica/social-auth.git"
+    "url": "git+https://github.com/desco-npm/social-auth.git"
   },
   "keywords": [
     "login",
@@ -17,10 +17,7 @@
   ],
   "author": "Rafael A. R. Dias <eu@diasrafael.com.br>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/descodifica/social-auth/issues"
-  },
-  "homepage": "https://github.com/descodifica/social-auth#readme",
+  "homepage": "https://github.com/desco-npm/social-auth",
   "dependencies": {
     "axios": "^0.21.1",
     "googleapis": "^67.0.0",
