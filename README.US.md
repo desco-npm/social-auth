@@ -151,6 +151,8 @@ With the credentials set, we can also verify that the access is still valid and 
 const valid = Google.checkAccess();
 ```
 
+---
+
 ## Author
 
 <table>
