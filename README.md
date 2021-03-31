@@ -1,6 +1,6 @@
 <div align="right">
   <a href="README.US.md">
-    <img alt="Read in American English" src="https://img.shields.io/static/v1?label=&message=🇺🇸 Read in American English&color=red&style=for-the-badge" />
+    <img alt="Read in American English" src="https://img.shields.io/static/v1?label=&message=Read+in+American+English&color=red&style=for-the-badge" />
   </a>
 </div>
 
@@ -12,8 +12,8 @@
       Pacote que permite login via Google (Backend).
       <br /><br />
       <div align="center">
-        <img alt="Licença MIT" src="https://img.shields.io/static/v1?label=Licença&message=MIT&color=green&style=for-the-badge">
-        <img alt="Versão 1.1.1" src="https://img.shields.io/static/v1?label=Versão&message=1.1.1&color=blue&style=for-the-badge">
+        <img alt="Licença MIT" src="https://img.shields.io/static/v1?label=Licen%C3%A7a&message=MIT&color=green&style=for-the-badge">
+        <img alt="Versão 1.1.1" src="https://img.shields.io/static/v1?label=Vers%C3%A3o&message=1.1.1&color=blue&style=for-the-badge">
       </div>
       <h4 align="center"> 
         ⛏️ Parcialemnte pronto para uso 🚀
@@ -30,11 +30,11 @@
 
 ## 📋 Tabela de conteúdos
 
-* [✔️ Recursos](#Recursos)
-* [🛠️ Tecnologias](#Tecnologias)
-* [⚙️ Instalação](#Instalação)
-* [📦 Importação](#Importação)
-* [📚 Como Usar](#Como-Usar)
+- [✔️ Recursos](#Recursos)
+- [🛠️ Tecnologias](#Tecnologias)
+- [⚙️ Instalação](#Instalação)
+- [📦 Importação](#Importação)
+- [📚 Como Usar](#Como-Usar)
 
 ---
 
@@ -48,15 +48,16 @@
 - [ ] Instagram;
 - [ ] Linkedin;
 - [ ] Steam;
+
 ---
 
 ## 🛠️ Tecnologias
 
 As seguintes tecnologias são utilizadas:
 
-* [NodeJS](https://nodejs.org/en/);
-* [GoogleApis](https://www.npmjs.com/package/googleapis);
-* [Axios](https://www.npmjs.com/package/axios);
+- [NodeJS](https://nodejs.org/en/);
+- [GoogleApis](https://www.npmjs.com/package/googleapis);
+- [Axios](https://www.npmjs.com/package/axios);
 
 ---
 
@@ -79,7 +80,7 @@ npm install --save @desco/social-auth
 ### Google
 
 ```js
-const SocialAuth = require('@desco/social-auth')
+const SocialAuth = require("@desco/social-auth");
 ```
 
 ---
@@ -94,9 +95,9 @@ const SocialAuth = require('@desco/social-auth')
 
 Iniciamos a API da Google passando como parâmetro um JSON com:
 
-* **id** - Id da API da Google;
-* **key** - Chave da API da Google;
-* **callbackUrl** - URL para onde a Google deve redirecionar o usário após o login;
+- **id** - Id da API da Google;
+- **key** - Chave da API da Google;
+- **callbackUrl** - URL para onde a Google deve redirecionar o usário após o login;
 
 > [Veja aqui como criar uma aplicação Google](https://support.google.com/a/answer/9187142?hl=pt-BR)
 
@@ -115,7 +116,7 @@ Com a API Google iniciada, precisamos gerar uma URL de login da Google a qual de
 Como parâmetr devemos passar um array contendo todos os escopos da Google que desejamos ter acesso com o login.
 
 ```js
-const url = Google.generateAuthUrl([ 'userinfo.email', 'userinfo.profile', ])
+const url = Google.generateAuthUrl(["userinfo.email", "userinfo.profile"]);
 ```
 
 > Note que somente o nome do escopo é necessário e não a URL inteira
@@ -129,7 +130,7 @@ Após o usuário realizar o login, a Google irá redirecioná-lo devolta para a 
 Nesse redirecionamento será informado via querystring o parâmetro **code** que iremos utilizar para setar as credenciais do usuário na nossa API e receber o token de acesso.
 
 ```js
-const token = await Google.setCredentials(code)
+const token = await Google.setCredentials(code);
 ```
 
 #### Recuperando Informações do Usuário
@@ -137,7 +138,7 @@ const token = await Google.setCredentials(code)
 Com as credenciais setadas, podemos recuperar os dados da conta Google do usuário:
 
 ```js
-const data = Google.userInfo()
+const data = Google.userInfo();
 ```
 
 > Os dados retornados serão aqueles referentes aos escopos solicitados na geração de URL de login e que o usuário deverá ter permitido acesso.
@@ -147,7 +148,7 @@ const data = Google.userInfo()
 Com as credenciais setadas, também podemos verificar se o acesso ainda é valido e ativo:
 
 ```js
-const valid = Google.checkAccess()
+const valid = Google.checkAccess();
 ```
 
 ---
@@ -174,7 +175,7 @@ const valid = Google.checkAccess()
         <img alt="GitHub Geral @descodifica" src="https://img.shields.io/static/v1?label=GitHub Geral&message=@descodifica&color=black&logo=github&style=for-the-badge">
       </a>
       <a href="https://github.com/desco-npm" target="_blank">
-        <img alt="GitHub NPM @desco-npm" src="https://img.shields.io/static/v1?label=GitHub NPM&message=@desco-npm&color=black&logo=github&style=for-the-badge">
+        <img alt="GitHub NPM @desco-npm" src="https://img.shields.io/static/v1?label=GitHub+NPM&message=@desco-npm&color=black&logo=github&style=for-the-badge">
       </a>
       <a href="https://www.npmjs.com/org/desco" target="_blank">
         <img alt="NPM @desco" src="https://img.shields.io/static/v1?label=NPM&message=@desco&color=red&logo=npm&style=for-the-badge">

@@ -1,6 +1,6 @@
 <div align="right">
   <a href="README.md">
-    <img alt="Ler em Portugês do Brasil" src="https://img.shields.io/static/v1?label=&message=🇧🇷 Ler em Português do Brasil&color=green&style=for-the-badge" />
+    <img alt="Ler em Portugês do Brasil" src="https://img.shields.io/static/v1?label=&message=Ler+em+Portugu%C3%AAs+do+Brasil&color=green&style=for-the-badge" />
   </a>
 </div>
 
@@ -30,11 +30,11 @@
 
 ## 📋 Table of Contents
 
-* [✔️ Resources](#Resources)
-* [🛠️ Technology](#Technology)
-* [⚙️ Installation](#Installation)
-* [📦 Import](#Import)
-* [📚 How to use](#How-to-use)
+- [✔️ Resources](#Resources)
+- [🛠️ Technology](#Technology)
+- [⚙️ Installation](#Installation)
+- [📦 Import](#Import)
+- [📚 How to use](#How-to-use)
 
 ---
 
@@ -55,9 +55,9 @@
 
 The following technologies are used:
 
-* [NodeJS](https://nodejs.org/en/);
-* [GoogleApis](https://www.npmjs.com/package/googleapis);
-* [Axios](https://www.npmjs.com/package/axios);
+- [NodeJS](https://nodejs.org/en/);
+- [GoogleApis](https://www.npmjs.com/package/googleapis);
+- [Axios](https://www.npmjs.com/package/axios);
 
 ---
 
@@ -80,7 +80,7 @@ npm install --save @desco/social-auth
 ### Google
 
 ```js
-const SocialAuth = require('@desco/social-auth')
+const SocialAuth = require("@desco/social-auth");
 ```
 
 ---
@@ -95,9 +95,9 @@ const SocialAuth = require('@desco/social-auth')
 
 We started the Google API by passing a JSON parameter with:
 
-* **id** - Google API id;
-* **key** - Google API key;
-* **callbackUrl** - URL to which Google should redirect the user after login;
+- **id** - Google API id;
+- **key** - Google API key;
+- **callbackUrl** - URL to which Google should redirect the user after login;
 
 > [See how to create a Google application here](https://support.google.com/a/answer/9187142?hl=en)
 
@@ -116,7 +116,7 @@ With the Google API started, we need to generate a Google login URL which must b
 As a parameter we must pass an array containing all the Google scopes that we wish to access with the login.
 
 ```js
-const url = Google.generateAuthUrl([ 'userinfo.email', 'userinfo.profile', ])
+const url = Google.generateAuthUrl(["userinfo.email", "userinfo.profile"]);
 ```
 
 > Note that only the scope name is required and not the entire URL
@@ -130,7 +130,7 @@ After the user logs in, Google will redirect him back to the **callbackUrl** inf
 In this redirection, the parameter **code** will be informed via querystring that we will use to set the user's credentials in our API and receive the access token.
 
 ```js
-const token = await Google.setCredentials(code)
+const token = await Google.setCredentials(code);
 ```
 
 #### Retrieving User Information
@@ -138,7 +138,7 @@ const token = await Google.setCredentials(code)
 With the credentials set, we can recover the user's Google account data:
 
 ```js
-const data = Google.userInfo()
+const data = Google.userInfo();
 ```
 
 > The data returned will be that referring to the scopes requested in the generation of the login URL and that the user must have allowed access to.
@@ -148,7 +148,7 @@ const data = Google.userInfo()
 With the credentials set, we can also verify that the access is still valid and active:
 
 ```js
-const valid = Google.checkAccess()
+const valid = Google.checkAccess();
 ```
 
 ## Author
@@ -170,10 +170,10 @@ const valid = Google.checkAccess()
         <img alt="Facebook @eudiasrafael" src="https://img.shields.io/static/v1?label=Facebook&message=@eudiasrafael&color=blue&logo=facebook&style=for-the-badge">
       </a>
       <a href="https://github.com/descodifica" target="_blank">
-        <img alt="GitHub Overview @descodifica" src="https://img.shields.io/static/v1?label=GitHub Overview&message=@descodifica&color=black&logo=github&style=for-the-badge">
+        <img alt="GitHub Overview @descodifica" src="https://img.shields.io/static/v1?label=GitHub+Overview&message=@descodifica&color=black&logo=github&style=for-the-badge">
       </a>
       <a href="https://github.com/desco-npm" target="_blank">
-        <img alt="GitHub NPM @desco-npm" src="https://img.shields.io/static/v1?label=GitHub NPM&message=@desco-npm&color=black&logo=github&style=for-the-badge">
+        <img alt="GitHub NPM @desco-npm" src="https://img.shields.io/static/v1?label=GitHub+NPM&message=@desco-npm&color=black&logo=github&style=for-the-badge">
       </a>
       <a href="https://www.npmjs.com/org/desco" target="_blank">
         <img alt="NPM @desco" src="https://img.shields.io/static/v1?label=NPM&message=@desco&color=red&logo=npm&style=for-the-badge">
